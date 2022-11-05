@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Java Script Lesson 3</title>
+    
+    </head>
+    <body>
+        <script>
+            "use strict";
+            let styles = ['Джаз', 'Блюз'];  // створюємо масив
+            styles.push('Рок-н-Ролл');  // додаємо в кінець новий елемент
+            /* Визначаємо індекс середнього елементу у випадку масива будь-якої довжини */
+            let middle;
+            if(styles.length % 2 == 0){
+                middle = styles.length / 2 - 1; // якщо кількість елементів парна
+            }
+            else{
+                middle = Math.ceil(styles.length / 2) - 1; // якщо кількість елементів непарна
+            }          
+            styles [middle] = 'Классика';   // Замінюємо середній елемент
+            alert(styles.shift());
+            styles.unshift('Регги');
+            styles.unshift('Рэп');
+            alert(styles);
+        </script>  
+    </body>
